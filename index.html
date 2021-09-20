@@ -11,30 +11,73 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Rotobo;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+
         }
 
-        .img {
-            height: 200px;
-            border-radius: 5%;
+        .name img {
+            width: 60%;
+            border-radius: 15px;
             margin: 20px 0;
+            background-size: cover;
+
         }
 
         .jumbotron {
             color: #022140;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #95b4b2;
+
         }
 
-        h1,
+        .jumbotron p {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .container p {
+            font-size: 20px;
+            padding-top: 20px;
+            font-weight: bold;
+            opacity: 0.8;
+        }
+
+        .nav-item a {
+            color: black;
+            font-weight: bold;
+            opacity: 0.8;
+        }
+
+        .nav-item a:hover {
+            color: red;
+            font-weight: bold;
+        }
+
         h2 {
-            color: darkblue;
+            font-weight: bold;
+            font-size: 30px;
+            color: darkcyan;
         }
 
-        h3 {
-            color: dodgerblue;
+
+        .fakeimg img {
+            width: 100%;
+            background-size: cover;
+            border-radius: 15px;
+            padding-top: 20px;
+        }
+
+        .navbar {
+            background-color: darkcyan !important;
+        }
+
+        .nav a img {
+            margin-right: 15px;
         }
     </style>
 </head>
@@ -44,30 +87,29 @@
     <div class="jumbotron text-center" style="margin-bottom:0">
         <h1>Võ Thị Thúy Phương</h1>
         <h2>1812828</h2>
-        <p>Phát triển ứng dụng web
-        <p>
+        <p>Phát triển ứng dụng web</p>
 
     </div>
     <!-- --------------------------------Navbar------------------------------->
     <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
-        <a class="navbar-brand" href="/Lab01/index.html"> <img src="./image/home2.png"> </a>
+        <a class="navbar-brand" href="/index.html"> <img src="./image/home2.png"> </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/Lab01/index.html"
-                        style="color: rgb(19, 20, 20); font-size: 20px;">Home</a>
+                    <a class="nav-link" href="/index.html"
+                        style="color: rgb(226, 230, 235); font-size: 20px; font-weight: bold;">Home</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                        style="color: rgb(24, 25, 26); font-size: 20px;">
+                        style="color: rgb(226, 230, 235); font-size: 20px; font-weight: bold;">
                         Exercies
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"
-                        style="background-color: rgb(134, 172, 230);color: darkblue;">
+                        style="background-color: darkcyan;">
                         <a class="dropdown-item" href="/index.html">Bootstrap</a>
                         <a class="dropdown-item" href="./1.html">Bảng 1-10</a>
                         <a class="dropdown-item" href="./2.html">Tìm phụ âm</a>
@@ -84,23 +126,28 @@
     <div class="container" style="margin-top:30px;">
         <div class="row">
             <div class="col-lg-6 col-md-12">
-                <h3>About Me</h3>
-                <div class="fakeimg">
-                    <img class="img" src="/image/me.jpg" style="width:400px;height:300px;">
+                <h2>Giới Thiệu</h2>
+                <div class="name">
+                    <img class="img" src="./image/me.jpg" ;">
+                    <p>Thúy Phương - CTK42<br>Chuyên ngành kĩ thuật phần mềm.<br>
+                        Sinh viên trường Đại học Đà Lạt</p>
                 </div>
-                <h5>Thúy Phương - CTK42</h5>
-                <h5>Chuyên ngành kĩ thuật phần mềm.</h5>
 
-                <h2>Các trang web của tôi</h2>
+
+                <h2>Website của tôi</h2>
                 <ul class="nav nav-pills flex-column">
-                    <li class="nav-item ">
-                        <a class="nav-link  " href="https://www.facebook.com/phuongvo.78/">Facebook</a>
+                    <li class="nav-item " style="font-size: 20px;">
+                        <a class="nav-link  " href="https://www.facebook.com/phuongvo.78/"><img
+                                src="./image/facebook.svg" height="25">Facebook</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/PhuongBland">Github</a>
+                    <li class="nav-item" style="font-size: 20px;">
+                        <a class="nav-link" href="https://github.com/PhuongBland"><img src="./image/github.svg"
+                                height="25">Github</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://phuongbland.blogspot.com/">BlogPhuongBland</a>
+
+                    <li class="nav-item" style="font-size: 20px;">
+                        <a class="nav-link" href="https://phuongbland.blogspot.com/"><img src="./image/blogger.svg"
+                                height="25">BlogPhuongBland</a>
                     </li>
                 </ul>
                 <p>
@@ -108,31 +155,31 @@
                 <hr class="d-sm-none">
             </div>
             <div class="col-lg-6 col-md-12">
-                <h2>Võ Thị Thúy Phương</h2>
-                <h5>Sinh ngày 26 - 07 - 2000</h5>
+                <h2>Vài nét về bản thân</h2>
+
                 <div class="fakeimg">
-                    <img src="./image/hinh.jpg" alt=""
-                        style="width: 400px; height: 300px; margin-bottom: 10px; border-radius: 5%;" />
+                    <img src="./image/hinh1.jpg" alt="">
                 </div>
-                <p>Sinh ra và lớn lên tại Bình Định.
-                    Nơi có thật nhiều cảnh đẹp, con người nơi đây thật thà, bình dị và rất nhiệt tình.
-                    Sở thích của tôi thích đi du lịch nhiều nơi, được khám phá nhiều vùng đất lạ.
-                </p>
-                <p>
+
+                <p>Võ Thị Thúy Phương (26 - 07 - 2000).<br>
+                    Sinh ra và lớn lên tại Bình Định.Nơi có thật nhiều cảnh đẹp, con người
+                    nơi đây thật thà, bình dị và
+                    rất nhiệt tình.
+                    Đam mê tìm hiểu về những công nghệ mới. Tôi đã theo học ngành Công nghệ Thông tin.
                     Học xa nhà cũng 3 năm, tôi đã trưởng thành hơn rất nhiều, được gặp nhiều thầy cô, bạn bè và học được
-                    những kiến thứ
-                    giúp tôi phát triển tương lai nhanh hơn.
+                    những kiến thứ giúp tôi phát triển tương lai nhanh hơn.
                 </p>
 
-                </p>
-                <h2>Hình ảnh đẹp về Bình Định quê tôi</h2>
-                <h5>Binh Dinh, Sep 19, 2021</h5>
-                <h6>Tháp Đôi Bình Định</h6>
+                <h2>Hình ảnh đẹp về Bình Định</h2>
                 <div class="fakeimg">
-                    <img class="fakeimg-b" src="/image/thapdoi.jpg"
-                        style="width: 400px; height: 300px;margin-bottom: 10px;">
+                    <img class="fakeimg-b" src="./image/baitrung.jpg">
                 </div>
-                <p>Nếu ai chưa từng đến Bình Định quê tôi, hãy dành một ít thời gian để khám phá những điều thú vị và
+
+                <p>Binh Dinh, Sep 19, 2021.
+                    Bãi Trứng Hoàng Hậu. Ở đây có những phiến đá to tròn, láng mịn nhìn xa trông giống những quả trứng
+                    chim khổng lồ.
+                    Nếu ai chưa từng đến Bình Định quê tôi, hãy dành một
+                    ít thời gian để khám phá những điều thú vị và
                     nhiều điều mới lạ.</p>
 
             </div>
