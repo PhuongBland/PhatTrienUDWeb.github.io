@@ -1,0 +1,80 @@
+ *{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+ body {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+           
+
+        }
+
+        .name img {
+            width: 60%;
+            border-radius: 15px;
+            margin: 20px 0;
+            background-size: cover;
+
+        }
+
+        .jumbotron {
+          background-image: linear-gradient(45deg, rgba(102, 101, 85, 0.8),55%, rgba(45,95,93,0.85)),url("../image/background2.jpeg");
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+
+        }
+        
+        .jumbotron p {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .container p {
+            font-size: 20px;
+            padding-top: 20px;
+            font-weight: bold;
+            opacity: 0.8;
+        }
+
+        .nav-item a {
+            color: black;
+            font-weight: bold;
+            opacity: 0.8;
+        }
+
+        .nav-item a:hover {
+            color: red;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-weight: bold;
+            font-size: 30px;
+            color: rgb(53, 163, 163);
+        }
+        h6,h3{
+            color: white;
+        }
+        h1,h5{
+            color: rgb(49, 226, 208);
+            font-weight: bold;
+        }
+        h4{
+            color: rgb(49, 226, 208);
+        }
+        .fakeimg img {
+            width: 100%;
+            background-size: cover;
+            border-radius: 15px;
+            padding-top: 20px;
+        }
+
+        .navbar {
+            background-color: darkcyan !important;
+        }
+
+        .nav a img {
+            margin-right: 15px;
+        }

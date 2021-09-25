@@ -5,8 +5,6 @@
     <title>Võ Thị Thúy Phương</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
-        rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -14,107 +12,66 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 15px;
-
-        }
-
-        .name img {
-            width: 60%;
-            border-radius: 15px;
-            margin: 20px 0;
-            background-size: cover;
-
-        }
-
-        .jumbotron {
-            color: #022140;
-            font-family: Arial, Helvetica, sans-serif;
-
-        }
-
-        .jumbotron p {
-            font-weight: bold;
-            font-size: 20px;
-        }
-
-        .container p {
-            font-size: 20px;
-            padding-top: 20px;
-            font-weight: bold;
-            opacity: 0.8;
-        }
-
-        .nav-item a {
-            color: black;
-            font-weight: bold;
-            opacity: 0.8;
-        }
-
-        .nav-item a:hover {
-            color: red;
-            font-weight: bold;
-        }
-
-        h2 {
-            font-weight: bold;
-            font-size: 30px;
-            color: darkcyan;
-        }
-
-
-        .fakeimg img {
-            width: 100%;
-            background-size: cover;
-            border-radius: 15px;
-            padding-top: 20px;
-        }
-
-        .navbar {
-            background-color: darkcyan !important;
-        }
-
-        .nav a img {
-            margin-right: 15px;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <!----------------------------Jumbotron--------------------------------------------->
     <div class="jumbotron text-center" style="margin-bottom:0">
         <h1>Võ Thị Thúy Phương</h1>
-        <h2>1812828</h2>
-        <p>Phát triển ứng dụng web</p>
+        <h3>1812828</h3>
+        <h5>Phát triển ứng dụng web</h5>
 
     </div>
     <!-- --------------------------------Navbar------------------------------->
     <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
         <a class="navbar-brand" href="./index.html"> <img src="./image/home2.png"> </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active">
                     <a class="nav-link" href="./index.html"
-                        style="color: rgb(226, 230, 235); font-size: 20px; font-weight: bold;">Home</a>
+                        style="color: rgb(255, 0, 0); font-size: 20px; font-weight: bold;">Trang chủ</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                    <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                         style="color: rgb(226, 230, 235); font-size: 20px; font-weight: bold;">
-                        Exercies
+                        Luyện tập 1
                     </a>
+
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMensuLink"
                         style="background-color: darkcyan;">
-                        <a class="dropdown-item" href="./index.html">Bootstrap</a>
+                        <a class="dropdown-item" href="./lt1.html">Bootstrap</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        style="color: rgb(226, 230, 235); font-size: 20px; font-weight: bold;">
+                        Luyện tập 2
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMensuLink"
+                        style="background-color: darkcyan;">
                         <a class="dropdown-item" href="./1.html">Bảng 1-10</a>
                         <a class="dropdown-item" href="./2.html">Tìm phụ âm</a>
                         <a class="dropdown-item" href="./cal.html">Máy tính đơn giản</a>
-                        <a class="dropdown-item" href="./jquery1.html">Bảng 1-10 jquery</a>
+
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        style="color: rgb(226, 230, 235); font-size: 20px; font-weight: bold;">
+                        Luyện tập 3
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMensuLink"
+                        style="background-color: darkcyan;">
                         <a class="dropdown-item" href="./jquery2.html">Tìm phụ âm jquery</a>
                         <a class="dropdown-item" href="./jquery3.html">Máy tính đơn giản jquery</a>
                     </div>
@@ -128,7 +85,7 @@
             <div class="col-lg-6 col-md-12">
                 <h2>Giới Thiệu</h2>
                 <div class="name">
-                    <img class="img" src="./image/me.jpg" ;">
+                    <img class="img" src="./image/me.jpg">
                     <p>Thúy Phương - CTK42<br>Chuyên ngành kĩ thuật phần mềm.<br>
                         Sinh viên trường Đại học Đà Lạt</p>
                 </div>
@@ -187,7 +144,10 @@
     </div>
 
     <div class=" jumbotron text-center" style="margin-bottom:0">
-        <p>I love Binh Dinh</p>
+        <h4>I love Binh Dinh❤</h4>
+        <h6>
+            Vo Thi Thuy Phuong &copy; | Thanks for visiting my site
+        </h6>
     </div>
 </body>
 
