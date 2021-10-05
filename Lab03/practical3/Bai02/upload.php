@@ -21,22 +21,22 @@
         echo "Upload not sucessfull (file size too large". $_FILES['file_upload']['size'].")";
         exec(-1);
     }
-    $temp=preg_split(`/[\/\\\]+/`,$_FILES["file_upload"]["name"]);
-    $filename=$temp[count($temp)-1];
-    if(!preg_match(`/\.((jpg|bmp|gif|png)$/i`,$filename)){
-        echo `Upload not sucessfull <br>`;
-          echo `Please, upload image file <br>`;
-          exit(-1);
-    }
-    $upload_dir="upload";
-    if(!file_exists($upload_dir))
-    mkdir("upload");
-    $upload_file=$upload_dir."/".$filenmae;
-   if (move_uploaded_file($_FILES["file_upload"]["tmp_name"], $upload_file) ) {
-        echo "Uploaded: ".$_FILES["file_upload"]["name"]."<br />";
-        echo "Type: ".$_FILES["file_upload"]["type"]."<br />";
-        echo "Size: ".($_FILES["file_upload"]["size"]/1024)." Kb<br />";
-} 
+        $temp = preg_split('/[\/\\\\]+/', $_FILES["file_upload"]["name"]);    $filename=$temp[count($temp)-1];
+        $filename = $temp[count($temp)-1];    
+        if (!preg_match('/\.(jpg|bmp|gif|png)$/i', $filename)){
+                echo `Upload not sucessfull <br>`;
+                echo `Please, upload image file <br>`;
+                exit(-1);
+            }
+            $upload_dir="upload";
+            if(!file_exists($upload_dir))
+            mkdir("upload");
+        $upload_file = $upload_dir."/".$filename;
+        if (move_uploaded_file($_FILES["file_upload"]["tmp_name"], $upload_file) ) {
+                echo "Uploaded: ".$_FILES["file_upload"]["name"]."<br />";
+                echo "Type: ".$_FILES["file_upload"]["type"]."<br />";
+                echo "Size: ".($_FILES["file_upload"]["size"]/1024)." Kb<br />";
+        } 
     else{
         echo  `Upload not sucessfull (error on server)`;
     }
