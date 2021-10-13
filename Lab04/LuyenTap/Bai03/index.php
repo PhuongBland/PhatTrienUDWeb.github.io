@@ -11,6 +11,9 @@
     $strawberry = new Strawberry("Strawberry", "red");
     $strawberry->message();
     $strawberry->intro();
+
+    
+
     ?>
 </body>
 </html>
