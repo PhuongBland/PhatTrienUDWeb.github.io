@@ -1,18 +1,3 @@
-/*
- Navicat Premium Data Transfer
-
- Source Server         : localhosttest
- Source Server Type    : MySQL
- Source Server Version : 100421
- Source Host           : localhost:3306
- Source Schema         : milf_milk
-
- Target Server Type    : MySQL
- Target Server Version : 100421
- File Encoding         : 65001
-
- Date: 19/10/2021 00:15:59
-*/
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
@@ -65,5 +50,46 @@ INSERT INTO `milkcompany` VALUES ('DS', 'Daisy', 'Khu công nghiệp Sóng Thầ
 INSERT INTO `milkcompany` VALUES ('MJ', 'Mead Johnson', 'Công ty nhập khẩu Việt Nam', 8741258, 'meadjohn@mj.com');
 INSERT INTO `milkcompany` VALUES ('NTF', 'Nutifood', 'Khu công nghiệp Sóng Thần Bình Dương', 7895632, 'nutifoo@ntf.com');
 INSERT INTO `milkcompany` VALUES ('VNM', 'Vinamilk', '123 Nguyễn Du - Quận 1 - TP.HCM', 8794561, 'vinamilk@vnm.com');
+
+
+
+CREATE TABLE `thongtinsua` (
+  `MaSua` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `STT` int(11) NOT NULL,
+  `Ten` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Hang` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `Loai` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `TrongLuong` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `DonGia` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ThanhPhan` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `LoiIch` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `HinhAnh` text COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `thongtinsua`
+--
+
+INSERT INTO `thongtinsua` (`MaSua`, `STT`, `Ten`, `Hang`, `Loai`, `TrongLuong`, `DonGia`, `ThanhPhan`, `LoiIch`, `HinhAnh`) VALUES
+('VNM400', 5, 'Dielac Sure', 'Vinamilk', 'Sữa bột', '400 gram', '90.000 VNĐ', 'Vitamine, B2', 'Bổ sung chất dinh dưỡng', ''),
+('DL180', 1, 'Fristi', 'Dutch Lady', 'Sữa tươi', '180 gram', '3.600 VNĐ', 'Các vitamin', 'Bổ sung các chất dinh dưỡng', ''),
+('DL100', 3, 'Sữa chua Cô Gái Hà Lan', 'Dutch Lady', 'Sữa chua', '100 gram', '3.000 VNĐ', 'Vitamine, B2', 'Tốt cho tiêu hóa', ''),
+('VNM120', 2, 'Sữa chua Plus', 'Vinamilk', 'Sữa chua', '120 gram', '4.000 VNĐ', 'Vitamine, B2', 'Tốt cho tiêu hóa', ''),
+('DL110', 4, 'Sữa chua uống Cô Gái Hà Lan', 'Dutch Lady', 'Sữa chua', '110 gram', '2.500 VNĐ', 'Vitamine, B2', 'Tốt cho tiêu hóa', '');
+
+ALTER TABLE `milkcompany`
+  ADD PRIMARY KEY (`companyName`);
+
+ALTER TABLE `thongtinsua`
+  ADD PRIMARY KEY (`Ten`),
+  ADD UNIQUE KEY `STT` (`STT`),
+  ADD KEY `thongtinsua_hangfk_1` (`Hang`);
+
+ALTER TABLE `thongtinsua`
+  MODIFY `STT` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+ALTER TABLE `thongtinsua`
+  ADD CONSTRAINT `thongtinsua_hangfk_1` FOREIGN KEY (`Hang`) REFERENCES `milkcompany` (`companyName`);
+COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;

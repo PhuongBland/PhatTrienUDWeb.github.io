@@ -15,81 +15,23 @@
 </head>
 
 <body>
-    <div class="container">
-         <h2 class="text-center">Chào mừng bạn đến với thế giới Milk</h2>
-            <div class="tab-content"> 
-                <div class="tab-pane active" id="home" role="tabpanel">
-                    <h3 class="text-center">Thông tin hãng Sữa</h3>
-                <table class="table table-dark">
-                    <thead>
-                        <tr>
-                            <th>Mã Hãng Sữa</th>
-                            <th>Tên Hãng Sữa</th>
-                            <th>Địa chỉ</th>
-                            <th>Số điện thoại</th>
-                            <th>Email</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                                
-                           
-                <?php 
-                $hs = new milkcompany("milk");
-                $result = $hs->GetAll();
-                while ($row =mysqli_fetch_array($result))
-                {
-                   echo"<tr>";
-                   echo"<td>".$row['CompanyCode']."</td>";
-                   echo"<td>".$row['CompanyName']."</td>";
-                   echo"<td>".$row['Address']."</td>";
-                   echo"<td>".$row['Phone']."</td>";
-                   echo"<td>".$row['Email']."</td>";
-                   echo"</tr>";
-                }
-                ?>
-
-                    </table>
-
-                </div> 
-        <div class="tab-content"> 
-        <div class="tab-pane active" id="profile" role="tabpanel">
-        <h3 class="text-center">Quản lý Khách Hàng</h2>
-        <p>Bảng Khách Hàng - <a href="addcus.php">Thêm</a></p>
-        <table class="table table-dark">
-            <thead>
-                <tr>
-                    <th>Mã khách hàng</th>
-                    <th>Họ tên</th>
-                    <th>Giới Tính</th>
-                    <th>Địa chỉ</th>
-                    <th>Số điện thoại</th>
-                    <th>D/E</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                $sv = new Customer("milk");
-                $result = $sv->GetAll();
-                while ($row = mysqli_fetch_array($result)) {
-                    echo "<tr>";
-                    echo "<td>" . $row['customercode'] . "</td>";
-                    echo "<td>" . $row['customername'] . "</td>";
-                   if($row['gender']==1)
-                   {
-                    echo'<td><i class="fas fa-male"></i></td>';
-                   }
-                   else 
-                   {
-                    echo'<td><i class="fas fa-female"></i></td>';
-                   }
-                    echo "<td>" . $row['address'] . "</td>";
-                    echo "<td>" . $row['phone'] . "</td>";
-                    echo "<td><a href='delcus.php?customercode=" . $row['customercode'] . "'><i class='fas fa-trash'></i></a><a href='editcus.php?customercode=" . $row['customercode'] . "'><i class='fa fa-edit'></i></a></td>";
-                    echo "</tr>";
-                }
-                ?>
-            </tbody>
-        </table>
+     <div class="container">
+        <div class="row justify-content-center">
+            <h2 class="text-center">Chào mừng bạn đến với thế giới Milk</h2>
+            <!-- List group -->
+               <div class="container mt-5">
+                 <div class="list-group" id="myList" role="tablist">
+                <a class="list-group-item list-group-item-action active" data-toggle="list" href="index_milkcompany.php" role="tab">Xem
+                    Hãng Sữa</a>
+                <a class="list-group-item list-group-item-action" data-toggle="list" href="index_customer.php" role="tab">Xem
+                    Khách Hàng</a>
+                <a class="list-group-item list-group-item-action" data-toggle="list" href="index_profilemilk.php" role="tab">Xem Sản
+                    Phẩm</a>
+            </div>
+            <div class="b-example-divider mt-5"></div>
+           
+         </div>
+        </div>
     </div>
 </body>
 
