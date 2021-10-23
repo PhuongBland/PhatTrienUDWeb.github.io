@@ -8,21 +8,21 @@
 </head>
 <body>
 <?php
- $con = new mysqli("localhost","root","");
+ $db = '1812828';
+ $con = new mysqli("localhost","root","",$db);
  if($con->connect_error)
  {
  die("connection failed ". $con ->connect_error);
  }
  else echo "Connection successed"."</br>";
- $query = "create database std";
- $crdb = $con->query($query);
- if($crdb)
+$query = "create table computer(id INT not null,name varchar(50),branch varchar(50))";
+ $crtb = $con->query($query);
+ if(!$crtb)
  {
- echo "Database created successfully";
+ die("Table not created: ".$con->error);
  }
- else {
- echo "Error creating database: ".$con->error ;
-}
-?> 
+ echo "table created.. !"."</br>";
+?>
+
 </body>
 </html>
