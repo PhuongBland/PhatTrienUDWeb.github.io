@@ -10,6 +10,12 @@ class Employee{
     public function __construct($Connection){
         $this ->conn=$Connection;
     }
+
+    public function execute($sql){
+       $result= $this->conn->query($sql);
+        return $result;
+    }
+    
     public function getAll()
     {
         $sql="Select * from employees";
@@ -28,7 +34,24 @@ class Employee{
         $this -> conn = null;
         return $result; 
    }
+   public function deleteData($id)
+   {
+     $sql="DELETE FROM employees
+        WHERE id = :id";
+     return $this->execute($sql);
+   }
 
-
+   public function insertData($Id,$Name,$SurName,$Email,$phone)
+   {
+     $sql="INSERT INTO employees(id,Name,SurName,Email,phone)
+     VALUES('$Name','$SurName','$Email','$phone')";
+      return $this->execute($sql);
+       
+   }
+   public function updateData($Id,$Name,$SurName,$Email,$phone){
+       $sql="UPDATE employees SET Name='$Name',SurName='$SurName',Email='$Email',phone='$phone'
+       where id= :id";  
+            return $this->execute($sql);
+        }
 }
 ?>

@@ -16,6 +16,9 @@
                     case "details":
                         $this->details();
                         break;
+                        case "delete":
+                        $this->delete();
+                        break;
             }
         }
 
@@ -32,6 +35,15 @@
         $id = $_GET["id"];
         $empObj = $emp->getById($id);
         $this->view("details", array(
+        "emp" => $empObj,
+        "title" => "MVC Obj"
+        )); 
+        }
+        public function delete(){
+        $emp = new Employee($this->Connection) ;
+        $id = $_GET["id"];
+        $empObj = $emp->deleteByID($id);
+        $this->view("delete", array(
         "emp" => $empObj,
         "title" => "MVC Obj"
         )); 
