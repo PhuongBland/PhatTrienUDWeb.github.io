@@ -7,11 +7,13 @@ class Employee{
     private $SurName;
     private $Email;
     private $Phone;
+   
+    
     public function __construct($Connection){
         $this ->conn=$Connection;
     }
-
-    public function execute($sql){
+    
+     public function execute($sql){
        $result= $this->conn->query($sql);
         return $result;
     }
@@ -34,23 +36,26 @@ class Employee{
         $this -> conn = null;
         return $result; 
    }
-   public function deleteData($id)
+   public function deleteData($id, $table)
    {
      $sql="DELETE FROM employees
-        WHERE id = :id";
+        WHERE id = '$id'";
      return $this->execute($sql);
    }
-
-   public function insertData($Id,$Name,$SurName,$Email,$phone)
+   
+  
+   public function insertEmployee($Name,$SurName,$Email,$phone)
    {
+       //id tự tăng , không cần truyền
      $sql="INSERT INTO employees(id,Name,SurName,Email,phone)
-     VALUES('$Name','$SurName','$Email','$phone')";
-      return $this->execute($sql);
+     VALUES(NULL,'$Name','$SurName','$Email','$phone')";
+     // hàm này có vấn đề
+        return $this->execute($sql);
        
    }
-   public function updateData($Id,$Name,$SurName,$Email,$phone){
+   public function updateData($Name,$SurName,$Email,$phone){
        $sql="UPDATE employees SET Name='$Name',SurName='$SurName',Email='$Email',phone='$phone'
-       where id= :id";  
+       where id= '$id'";  
             return $this->execute($sql);
         }
 }
