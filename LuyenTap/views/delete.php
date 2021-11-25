@@ -1,0 +1,1 @@
+<?php echo "Đã xóa thành viên thành công?";?>
