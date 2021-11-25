@@ -1,0 +1,4 @@
+khi nào sử dụng statis và non statis
+statis: là phương thức và thuộc tính của lớp
+khi khai báo staitc k ảnh hưởng đối tượng
+non statis: phương thức(thuộc tinh) của đối tượng,
